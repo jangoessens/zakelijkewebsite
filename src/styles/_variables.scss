@@ -1,0 +1,20 @@
+:root {
+    --color-primary: #d62872;
+    --color-primary-hover: #a500a1;
+    --color-secondary: #fddde6;
+    --color-secondary-hover: #fbb1c1;
+    --color-dark: #222;
+    --color-light: #f8f8f8;
+    --color-text: #333;
+  
+    // Misc
+    --navbar-height: 4rem;
+
+
+    // gradients
+    --gradient-dark: linear-gradient(180deg, #222 50rem, #333 62.5rem);
+    --gradient-primary: linear-gradient(180deg, #d62872 50rem, #fddde6 62.5rem);
+    --gradient-secondary: linear-gradient(180deg, #fddde6 50rem, #fbb1c1 62.5rem);
+    --gradient-light: linear-gradient(180deg, #F8F8F8 50rem, #FFFFFF 62.5rem);
+  }
+  

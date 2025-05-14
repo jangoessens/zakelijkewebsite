@@ -1,0 +1,38 @@
+---
+const links = [
+    { name: 'Home', href: '/' },
+    { name: 'Voorbeeldwebsite Nagelstyliste', href: '/voorbeeldwebsite-1' },
+];
+---
+
+<nav class="navbar">
+    <div class="container">
+        <a href="/" class="logo"><img src="/logo-white.svg" height="64"></a>
+  
+        <button role="button" class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+
+            <svg class="button-icon" width="20" height="18" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="burger-part top" d="M23.1892 0.0432434H0.810811C0.363012 0.0432434 0 0.406256 0 0.854054V1.98919C0 2.43699 0.363012 2.8 0.810811 2.8H23.1892C23.637 2.8 24 2.43699 24 1.98919V0.854054C24 0.406256 23.637 0.0432434 23.1892 0.0432434Z" fill="#171717"></path>
+                <path class="burger-part middle" d="M23.1892 8.66486H0.810811C0.363012 8.66486 0 9.02788 0 9.47567V10.6108C0 11.0586 0.363012 11.4216 0.810811 11.4216H23.1892C23.637 11.4216 24 11.0586 24 10.6108V9.47567C24 9.02788 23.637 8.66486 23.1892 8.66486Z" fill="#171717"></path>
+                <path class="burger-part bottom" d="M23.1892 17.2865H0.810811C0.363012 17.2865 0 17.6495 0 18.0973V19.2324C0 19.6802 0.363012 20.0432 0.810811 20.0432H23.1892C23.637 20.0432 24 19.6802 24 19.2324V18.0973C24 17.6495 23.637 17.2865 23.1892 17.2865Z" fill="#171717"></path>
+            </svg>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            {links.map(link => (
+                <li key={link.name}>
+                    <a href={link.href}>{link.name}</a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</nav>
+
+<script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburgerBtn?.addEventListener('click', () => {
+        navLinks?.classList.toggle('open');
+    });
+</script>
+

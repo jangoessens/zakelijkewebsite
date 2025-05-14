@@ -1,0 +1,87 @@
+---
+import Navbar from "../components/Navbar.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Jouw Professionele Website Zonder Gedoe">
+  <header class="site-header with-navbar">
+    <Navbar />
+    <div class="header-hero">
+      <div class="header-background">
+        <!-- <picture>
+            <img src="/src/assets/background-basic.webp" alt="Header Background" />
+        </picture> -->
+      </div>
+
+      <div class="container">
+        <h1>
+          Professionele websites voor nagelstylisten en beauty ondernemers
+        </h1>
+        <p class="subtitle">
+          Laat je online zien – zonder het gedoe van techniek
+        </p>
+        <a href="#paketten" class="btn btn--primary">Bekijk de opties</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="packages bg-gradient-light" id="paketten">
+    <div class="container">
+      <h2>Kies een pakket dat bij je past</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Basis Website</h3>
+          <p>
+            Een nette, eenvoudige website met jouw diensten, foto's en
+            contactgegevens. Snel online zonder gedoe.
+          </p>
+          <ul>
+            <li>1 pagina website</li>
+            <li>Mobiel vriendelijk</li>
+            <li>Snelle levering</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Website + Formulier</h3>
+          <p>
+            Laat klanten direct contact opnemen of een afspraak aanvragen via
+            een formulier.
+          </p>
+          <ul>
+            <li>2–3 pagina's</li>
+            <li>Aanmeld- of contactformulier</li>
+            <li>Basis SEO optimalisatie</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Volledige Service</h3>
+          <p>
+            Je hoeft zelf bijna niets te doen – ik regel de domeinnaam, hosting,
+            teksten én website.
+          </p>
+          <ul>
+            <li>Volledige installatie</li>
+            <li>Teksten + content ondersteuning</li>
+            <li>Hosting & onderhoud optioneel</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="note">
+        Je bepaalt zelf hoe betrokken je bent: lever je teksten en foto's aan,
+        of laat mij het regelen.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer bg-gradient-dark">
+    <div class="container">
+      <p>
+        © 2025 Zakelijke Website – Persoonlijke webdesign voor beauty
+        ondernemers
+      </p>
+    </div>
+  </footer>
+</BaseLayout>
