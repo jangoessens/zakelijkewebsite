@@ -1,13 +1,17 @@
 ---
 const links = [
     { name: 'Home', href: '/' },
-    { name: 'Voorbeeldwebsite Nagelstyliste', href: '/voorbeeldwebsite-1' },
+    { name: 'Mockupsite 1', href: '/mockup-1' },
 ];
+
+const { type } = Astro.props ?? { type: 'default' };
+
+const logo = type === 'dark' ? '/logo-white.svg' : '/logo-color.svg';
 ---
 
-<nav class="navbar">
+<nav class={`navbar ${type}`}>
     <div class="container">
-        <a href="/" class="logo"><img src="/logo-white.svg" height="64"></a>
+        <a href="/" class="logo"><img src={`${logo}`} height="64"></a>
   
         <button role="button" class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
 

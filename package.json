@@ -8,10 +8,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "astro build && gh-pages -d dist"
-
   },
   "dependencies": {
-    "astro": "^5.7.13"
+    "@astrojs/vue": "^5.0.13",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "astro": "^5.7.13",
+    "vue": "^3.5.14"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",

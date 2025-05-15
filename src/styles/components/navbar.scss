@@ -2,10 +2,16 @@
 
 .navbar {
     background-color: var(--color-dark);
-    padding: 0 1rem;
     color: white;
+    padding: 0 1rem;
     border-bottom: 2px solid var(--color-primary);
     height: var(--navbar-height);
+    
+    &.light {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+        border-bottom: 2px solid var(--color-primary-light);
+    }
     .container {
         display: flex;
         justify-content: space-between;
@@ -45,7 +51,7 @@
 
             a {
                 text-decoration: none;
-                color: var(--color-light);
+                color: inherit;
                 transition: color 0.3s ease;
 
                 &:hover {

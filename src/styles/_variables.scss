@@ -1,20 +1,18 @@
 :root {
-    --color-primary: #d62872;
-    --color-primary-hover: #a500a1;
-    --color-secondary: #fddde6;
-    --color-secondary-hover: #fbb1c1;
-    --color-dark: #222;
-    --color-light: #f8f8f8;
-    --color-text: #333;
+  --color-primary: #253392; /* Deep Blue Gray */
+  --color-primary-hover: #3749bd; /* Slightly darker Deep Blue Gray */
+  --color-secondary: #692377; /* Deep Purple Gray */
+  --color-secondary-hover: #8f549b; /* Muted Purple */
+  --color-dark: #1d1d33; /* Dark Blue */
+  --color-light: #f2e9e4; /* Light Lavender */
+  --color-text: #1b1b1b; /* Soft Mauve */
   
-    // Misc
-    --navbar-height: 4rem;
+  // Misc
+  --navbar-height: 4rem;
 
-
-    // gradients
-    --gradient-dark: linear-gradient(180deg, #222 50rem, #333 62.5rem);
-    --gradient-primary: linear-gradient(180deg, #d62872 50rem, #fddde6 62.5rem);
-    --gradient-secondary: linear-gradient(180deg, #fddde6 50rem, #fbb1c1 62.5rem);
-    --gradient-light: linear-gradient(180deg, #F8F8F8 50rem, #FFFFFF 62.5rem);
-  }
-  
+  // gradients
+  --gradient-dark: linear-gradient(180deg, #1d1d33 50rem, #192992 62.5rem);
+  --gradient-primary: linear-gradient(180deg, #192992 50rem, #3749bd 62.5rem);
+  --gradient-secondary: linear-gradient(180deg, #692377 50rem, #8f549b 62.5rem);
+  --gradient-light: linear-gradient(180deg, #ffffff 50rem, #d7d9ff 62.5rem);
+}

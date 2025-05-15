@@ -1,4 +1,4 @@
-@use 'all' as *;
+@use "all" as *;
 
 .site-header {
     background: var(--color-light);
@@ -8,7 +8,7 @@
         font-size: 3rem;
         margin-bottom: 0.5rem;
     }
-    
+
     .subtitle {
         font-size: 1.125rem;
         color: var(--color-light);
@@ -27,12 +27,14 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        color: white;
         text-align: center;
         padding: 0;
 
+        &.light-text {
+            color: var(--color-light);
+        }
         @include breakpoint-up(md) {
-            min-height: 60vh;;
+            min-height: 60vh;
         }
 
         .header-background {
@@ -41,19 +43,26 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('/src/assets/background-basic.webp') no-repeat center center;
             background-size: cover;
             z-index: 1;
 
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.6); /* Darkened layer */
-                z-index: 2;
+            &.image-1 {
+                background: url("/src/assets/background-basic.webp") no-repeat center center;
+                &::after {
+                    background: rgba(0, 0, 0, 0.65);
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                }
+            }
+
+            &.svg {
+                background: url("/src/assets/wave-background.svg") no-repeat center bottom;
+                background-size: cover;
             }
         }
 
@@ -67,6 +76,9 @@
             margin-bottom: 1rem;
         }
 
+        .typing-text {
+            min-height: 3rem;
+        }
         .subtitle {
             font-size: 1.25rem;
         }
@@ -80,31 +92,6 @@
 .bg-gradient-dark {
     background: var(--gradient-dark);
     color: var(--color-light);
-}
-
-.navbar {
-    position: sticky;
-    top: 0;
-    background: white;
-    border-bottom: 1px solid #eee;
-    padding: 1rem 0;
-    z-index: 10;
-
-    .container {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: center;
-    }
-
-    a {
-        text-decoration: none;
-        color: var(--color-primary);
-        font-weight: 600;
-
-        &:hover {
-            color: var(--color-primary-hover);
-        }
-    }
 }
 
 .packages {
