@@ -1,21 +1,33 @@
 :root {
-  --color-primary: #253392; /* Deep Blue Gray */
-  --color-primary-hover: #3749bd; /* Slightly darker Deep Blue Gray */
-  --color-secondary: #692377; /* Deep Purple Gray */
-  --color-secondary-hover: #8f549b; /* Muted Purple */
-  --color-dark: #1d1d33; /* Dark Blue */
-  --color-light: #f2e9e4; /* Light Lavender */
-  --color-text: #1b1b1b; /* Soft Mauve */
-  
+  --color-primary: #3c5ddf; /* Frisse helderblauw */
+  --color-primary-hover: #2f4aca; /* Donkerdere variant voor hover */
+  --color-secondary: #e17a5f; /* Zachte warme oranje-roze */
+  --color-secondary-hover: #d86549; /* Diepere warme tint */
+  --color-dark: #1b223e; /* Diepe nachtblauw */
+  --color-light: #f9f9f9; /* Bijna wit, neutraal */
+  --color-text: #222222; /* Iets donkerder en neutraler dan eerder */
+  --color-border: #d8dcf0; /* Koele zachte grijsblauw */
+
   // Misc
   --navbar-height: 4rem;
 
-  // gradients
-  --gradient-dark: linear-gradient(180deg, #1d1d33 50rem, #192992 62.5rem);
-  --gradient-primary: linear-gradient(180deg, #192992 50rem, #3749bd 62.5rem);
-  --gradient-secondary: linear-gradient(180deg, #692377 50rem, #8f549b 62.5rem);
-  --gradient-light: linear-gradient(180deg, #ffffff 50rem, #d7d9ff 62.5rem);
+  // Gradients
+  --gradient-dark: linear-gradient(45deg, #1b223e 30%, #2c3563 100%);
+  --gradient-primary: linear-gradient(180deg, #3c5ddf 0%, #2f4aca 100%);
+  --gradient-secondary: linear-gradient(180deg, #e17a5f 0%, #d86549 100%);
+  --gradient-light: linear-gradient(180deg, #ffffff 30%, #d8dcf0 100%);
+  // Font
 
+  $font-default: "Inter", system-ui, sans-serif;
+
+  --font-body: #{$font-default};
+  --font-accent: #{$font-default};
+
+  --font-size-base: 17px;
+  --font-size-lg: 20px;
+  --font-size-sm: 14px;
+
+  --line-height-base: 1.6;
 
   // Radius
   --radius-xs: 0.125rem; /* 2px */

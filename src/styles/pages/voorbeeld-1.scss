@@ -1,4 +1,4 @@
-:root.mockup-1 {
+:root.voorbeeld-1 {
   --color-primary: #d62872;
   --color-primary-hover: #a500a1;
   --color-secondary: #fddde6;
@@ -15,6 +15,9 @@
   --gradient-primary: linear-gradient(180deg, #d62872 50rem, #fddde6 62.5rem);
   --gradient-secondary: linear-gradient(180deg, #fddde6 50rem, #fbb1c1 62.5rem);
   --gradient-light: linear-gradient(180deg, #f8f8f8 50rem, #ffffff 62.5rem);
+
+  --font-size-base: 17px;
+  --font-size-lg: 22px;
 }
 
 .header-hero {

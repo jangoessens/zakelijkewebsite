@@ -4,6 +4,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Packages from "../components/Packages.astro";
 import TypingText from "../components/TypingText.vue";
 import ContactForm from "../components/ContactForm.astro";
+import UspCards from "../components/UspCards.astro";
+import ImageCarousel from "../components/ImageCarousel.vue";
 ---
 
 <BaseLayout title="Jouw Professionele Website Zonder Gedoe">
@@ -17,9 +19,12 @@ import ContactForm from "../components/ContactForm.astro";
           Professionele websites voor <TypingText
             words={[
               "nagelstylisten",
+              'fotografen',
               "thuiskappers",
-              "Nail artists",
-              "zelfstandig ondernemers",
+              "ondernemers",
+              'rijinstructeurs',
+              "coaches",
+              "zzp'ers",
             ]}
             client:load
           />
@@ -33,19 +38,60 @@ import ContactForm from "../components/ContactForm.astro";
     </div>
   </header>
 
+  <section class="block block--large image-showcase border-bottom">
+    <div class="container">
+      <div class="two-columns">
+        <div class="intro-content">
+          <h2>Laat zien <span class="highlight">wie je bent</span></h2>
+          <p>
+            Een website is meer dan alleen een visitekaartje. Het is jouw online
+            aanwezigheid, jouw verhaal en de manier om je business en
+            profesionele uitstraling te geven.
+          </p>
+          <p>
+            Met jouw input bouw ik een website die
+            niet alleen mooi is, maar ook functioneel en gebruiksvriendelijk. Ik
+            zorg ervoor dat jouw website goed vindbaar is in zoekmachines, zodat
+            je meer klanten kunt aantrekken. Of je nu een nagelstyliste,
+            thuiskapper of zelfstandig ondernemer bent, ik help je om jouw
+            unieke stijl en persoonlijkheid te laten zien.
+          </p>
+        </div>
+
+        <ImageCarousel
+          client:load
+          images={[
+            "/images/voorbeeld-afbeelding-1.webp",
+            "/images/voorbeeld-afbeelding-2.webp",
+            "/images/voorbeeld-afbeelding-3.webp",
+            "/images/voorbeeld-afbeelding-4.webp",
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+  <section class="block block--small bg-gradient-dark usps border-bottom">
+    <div class="container">
+      <h2>Boost jouw business en online aanwezigheid</h2>
+      <UspCards />
+    </div>
+  </section>
+
   <Packages />
 
-  <section class="block block--large contact bg-gradient-dark" id="neem-contact-op">
+  <section
+    class="block block--large contact bg-gradient-dark"
+    id="neem-contact-op"
+  >
     <div class="container">
       <div class="form-container bg-white">
-
         <h2>Neem gerust contact op</h2>
         <p>
-          Heb je een vraag, wil je een website laten maken of gewoon even sparren
-          over de mogelijkheden? Stuur gerust een berichtje – ik denk graag met je
-          mee.
+          Heb je een vraag, wil je een website laten maken of gewoon even
+          sparren over de mogelijkheden? Stuur gerust een berichtje – ik denk
+          graag met je mee.
         </p>
-        
+
         <ContactForm />
       </div>
     </div>
@@ -53,16 +99,15 @@ import ContactForm from "../components/ContactForm.astro";
   <footer class="site-footer bg-gradient-dark">
     <div class="container">
       <p>
-        © 2025 Zakelijke Website – Persoonlijke webdesign voor beauty
-        ondernemers
+        © 2025 Zakelijke Website – Persoonlijke webdesign voor ondernemers
       </p>
     </div>
   </footer>
 </BaseLayout>
 
 <style lang="scss">
-  @use '../styles/all.scss' as *;
-  
+  @use "../styles/all.scss" as *;
+
   .block.contact {
     background-color: #253392;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='173' height='173' viewBox='0 0 200 200'%3E%3Cpolygon fill='%231D1D33' fill-opacity='0.15' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
@@ -70,9 +115,8 @@ import ContactForm from "../components/ContactForm.astro";
   }
   .form-container {
     max-width: 35rem;
-    margin: 0 auto;;
+    margin: 0 auto;
     padding: 1.5rem;
     border-radius: var(--radius-card-lg);
   }
-
 </style>

@@ -1,19 +1,6 @@
 // Twee voorgedefinieerde font themes
-$font-default: 'Inter', system-ui, sans-serif;
-$font-feminine: 'Cormorant Garamond', 'Times New Roman', serif;
 
-:root {
-  --font-body: #{$font-default};
-  --font-accent: #{$font-default};
-
-  --font-size-base: 16px;
-  --font-size-lg: 20px;
-  --font-size-sm: 14px;
-
-  --line-height-base: 1.6;
-}
-
-body {
+body { 
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);

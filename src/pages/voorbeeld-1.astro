@@ -1,0 +1,93 @@
+---
+import ImageShowcase from "../components/ImageShowcase.astro";
+import Navbar from "../components/Navbar.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ImageCarousel from "../components/ImageCarousel.vue";
+import ContactForm from "../components/ContactForm.astro";
+---
+
+<BaseLayout title="Jouw Professionele Website Zonder Gedoe" page="voorbeeld-1">
+  <header class="site-header with-navbar">
+    <Navbar type="light" />
+    <div class="header-hero">
+      <div class="header-background svg"></div>
+
+      <div class="container">
+        <h1>
+          Professioneel online zichtbaar als <span class="highlight"
+            >specialist</span
+          >
+        </h1>
+        <p class="subtitle">
+          Zichtbaar worden op jouw manier – ik zorg dat jouw website werkt én
+          bij je past.
+        </p>
+        <a href="#paketten" class="btn btn--primary">Bekijk de opties</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="block block--large image-showcase">
+      <div class="container">
+        <div class="two-columns">
+          <div class="intro-content">
+            <h2>Laat zien <span class="highlight">wie je bent</span></h2>
+            <p>
+              Bezoekers kiezen niet alleen voor wat je doet, maar ook voor wie
+              je bent. Met een paar goede foto's geef je direct een vertrouwd
+              gevoel. Denk aan beelden van jezelf aan het werk, je salon of
+              studio, en je mooiste creaties.
+            </p>
+          </div>
+
+          <ImageCarousel
+            client:load
+            images={[
+              "/images/voorbeeld-afbeelding-1.webp",
+              "/images/voorbeeld-afbeelding-2.webp",
+              "/images/voorbeeld-afbeelding-3.webp",
+              "/images/voorbeeld-afbeelding-4.webp",
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+
+   
+  <section class="block block--large contact bg-gradient-light" id="neem-contact-op">
+    <div class="container">
+      <div class="form-container bg-white">
+
+        <h2>Neem gerust contact op</h2>
+        <p>
+          Heb je een vraag, wil je een website laten maken of gewoon even sparren
+          over de mogelijkheden? Stuur gerust een berichtje – ik denk graag met je
+          mee.
+        </p>
+        
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer bg-gradient-dark">
+    <div class="container">
+      <p>
+        © 2025 Zakelijke Website – Persoonlijke webdesign voor beauty
+        ondernemers
+      </p>
+    </div>
+  </footer>
+</BaseLayout>
+
+<style lang="scss">
+  @use "../styles/pages/voorbeeld-1.scss";
+
+  .form-container {
+    max-width: 35rem;
+    margin: 0 auto;;
+    padding: 1.5rem;
+    border-radius: var(--radius-card-lg);
+  }
+</style>

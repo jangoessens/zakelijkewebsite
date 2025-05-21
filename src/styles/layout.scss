@@ -1,4 +1,4 @@
-@use "all" as *;
+@use "./all" as *;
 
 .site-header {
     background: var(--color-light);
@@ -47,7 +47,10 @@
             z-index: 1;
 
             &.image-1 {
-                background: url("/src/assets/background-basic.webp") no-repeat center center;
+                background: url("/src/assets/background-basic.webp") ;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center center;
                 &::after {
                     background: rgba(0, 0, 0, 0.65);
                     content: "";
@@ -86,14 +89,23 @@
 }
 
 .block {
+    &.block--small {
+        padding: 3rem 0;
+    }
     &.block--medium {
         padding: 4rem 0;
     }
     &.block--large {
-        padding: 8rem 0;
+        padding: 3rem 0;
+        @include breakpoint-up(md) {
+
+            padding: 8rem 0;
+        }
     }
 }
-
+.border-bottom {
+    border-bottom: 2px solid var(--color-border);
+}
 .bg-gradient-light {
     background: var(--gradient-light);
 }
@@ -113,10 +125,36 @@
     color: var(--color-dark);
 }
 
+.two-columns {
+    display: grid;
+    grid-gap: 2rem;
 
-
+    @include breakpoint-up(md) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+    }
+}
 
 .site-footer {
     padding: 2rem 0;
     text-align: center;
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        content: "";
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -3%;
+        width: 106%;
+        transform: skewX(-8deg);
+        border-radius: 2px;
+        height: 33%;
+        background-color: var(--color-secondary);
+        z-index: -1;
+    }
 }

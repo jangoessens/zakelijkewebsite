@@ -1,0 +1,99 @@
+---
+import { Icon } from 'astro-icon/components'
+
+// Je kunt het uitbreiden naar 6 USP’s door extra objecten toe te voegen.
+const usps = [
+  {
+    icon: "📱",
+    title: "Professionele uitstralign",
+    description: "Zorg voor een professionele uitstraling van je business.",
+  },
+  {
+    icon: "⚡️",
+    title: "Snel online",
+    description:
+      "Binnen een paar dagen staat je site live en klaar voor gebruik.",
+  },
+  {
+    icon: "🔍",
+    title: "Goed vindbaar",
+    description:
+      "Zo kunnen alle potentiele klanten jouw vinden.",
+  },
+  {
+    icon: "💬",
+    title: "Meer aanvragen",
+    description: "Laat bezoekers makkelijk contact opnemen of afspraken maken.",
+  },
+];
+---
+
+<div class="usp-grid">
+  {
+    usps.map((usp, index) => (
+      <a href="#paketten" class="usp-card" key={index}>
+        <div class="icon">{usp.icon}</div>
+        <div>
+
+        <h3>{usp.title}</h3>
+        <p>{usp.description}</p>
+        </div>
+      </a>
+    ))
+  }
+</div>
+
+<style lang="scss">
+    @use '../styles/all.scss' as *;
+  .usp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top:2rem;
+    @include breakpoint-up(sm) {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    @include breakpoint-up(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .usp-card {
+    text-decoration: none;
+    color: var(--color-dark);
+
+    background: white;
+    border-radius: var(--radius-card-md);
+    border: 1px solid var(--color-border);
+    border-bottom-width: 3px;;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    p {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint-up(md) {
+        padding: 1.5rem;
+        grid-template-columns: 1fr;
+        align-items: center;
+        text-align: center;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    .icon {
+      font-size: 2rem;
+    }
+  }
+</style>

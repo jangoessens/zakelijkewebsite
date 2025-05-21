@@ -1,7 +1,8 @@
 ---
 const links = [
     { name: 'Home', href: '/' },
-    { name: 'Mockupsite 1', href: '/mockup-1' },
+    { name: 'Paketten', href: '#paketten' },
+    { name: 'Contact', href: '#neem-contact-op' },
 ];
 
 const { type } = Astro.props ?? { type: 'default' };
@@ -35,6 +36,12 @@ const logo = type === 'dark' ? '/logo-white.svg' : '/logo-color.svg';
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navLinks = document.getElementById('nav-links');
 
+    const navLinkElements = navLinks?.querySelectorAll('a');
+    navLinkElements?.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks?.classList.remove('open');
+        });
+    });
     hamburgerBtn?.addEventListener('click', () => {
         navLinks?.classList.toggle('open');
     });
