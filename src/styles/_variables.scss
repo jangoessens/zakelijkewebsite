@@ -15,4 +15,20 @@
   --gradient-primary: linear-gradient(180deg, #192992 50rem, #3749bd 62.5rem);
   --gradient-secondary: linear-gradient(180deg, #692377 50rem, #8f549b 62.5rem);
   --gradient-light: linear-gradient(180deg, #ffffff 50rem, #d7d9ff 62.5rem);
+
+
+  // Radius
+  --radius-xs: 0.125rem; /* 2px */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
+
+  --radius-btn-sm: 0.5rem; /* 8px */
+  --radius-btn-md: 0.75rem; /* 12px */
+  --radius-btn-lg: 1rem; /* 16px */
+
+  --radius-card-sm: 0.5rem; /* 8px */
+  --radius-card-md: 0.75rem; /* 12px */
+  --radius-card-lg: 1rem; /* 16px */
 }

@@ -14,7 +14,7 @@ onMounted(() => {
     for (let i = 0; i < word.length; i++) {
       spelled.value += word[i]
       await new Promise((resolve) =>
-        setTimeout(resolve, Math.random() * (400 - 50) + 50)
+        setTimeout(resolve, Math.random() * (200 - 50) + 50)
       )
     }
   }

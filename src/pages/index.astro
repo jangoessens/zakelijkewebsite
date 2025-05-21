@@ -3,30 +3,53 @@ import Navbar from "../components/Navbar.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Packages from "../components/Packages.astro";
 import TypingText from "../components/TypingText.vue";
+import ContactForm from "../components/ContactForm.astro";
 ---
 
 <BaseLayout title="Jouw Professionele Website Zonder Gedoe">
   <header class="site-header with-navbar">
     <Navbar type="dark" />
     <div class="header-hero light-text">
-      <div class="header-background image-1">
-      </div>
+      <div class="header-background image-1"></div>
 
       <div class="container">
         <h1>
-          Professionele websites voor <TypingText words={["nagelstylisten", "thuiskappers", "Nail artists", "zelfstandig ondernemers"]} client:load />
-
+          Professionele websites voor <TypingText
+            words={[
+              "nagelstylisten",
+              "thuiskappers",
+              "Nail artists",
+              "zelfstandig ondernemers",
+            ]}
+            client:load
+          />
         </h1>
         <p class="subtitle">
-          Zichtbaar worden op jouw manier – ik zorg dat jouw website werkt én bij je past.
+          Zichtbaar worden op jouw manier – ik zorg dat jouw website werkt én
+          bij je past.
         </p>
         <a href="#paketten" class="btn btn--primary">Bekijk de opties</a>
       </div>
     </div>
   </header>
 
-  <Packages></Packages>
+  <Packages />
 
+  <section class="block block--large contact bg-gradient-dark" id="neem-contact-op">
+    <div class="container">
+      <div class="form-container bg-white">
+
+        <h2>Neem gerust contact op</h2>
+        <p>
+          Heb je een vraag, wil je een website laten maken of gewoon even sparren
+          over de mogelijkheden? Stuur gerust een berichtje – ik denk graag met je
+          mee.
+        </p>
+        
+        <ContactForm />
+      </div>
+    </div>
+  </section>
   <footer class="site-footer bg-gradient-dark">
     <div class="container">
       <p>
@@ -36,3 +59,20 @@ import TypingText from "../components/TypingText.vue";
     </div>
   </footer>
 </BaseLayout>
+
+<style lang="scss">
+  @use '../styles/all.scss' as *;
+  
+  .block.contact {
+    background-color: #253392;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='173' height='173' viewBox='0 0 200 200'%3E%3Cpolygon fill='%231D1D33' fill-opacity='0.15' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+  }
+  .form-container {
+    max-width: 35rem;
+    margin: 0 auto;;
+    padding: 1.5rem;
+    border-radius: var(--radius-card-lg);
+  }
+
+</style>

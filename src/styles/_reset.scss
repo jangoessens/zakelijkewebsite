@@ -25,3 +25,21 @@ video {
   height: auto;
   display: block;
 }
+
+
+li.check {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+li.check::before {
+  content: '✔';
+  color: green;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  line-height: 1.2;
+}

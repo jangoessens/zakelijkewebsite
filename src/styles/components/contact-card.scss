@@ -1,0 +1,40 @@
+@use "../all.scss" as *;
+.packages {
+    padding: 4rem 0;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+    }
+
+    .card {
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        display: grid;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        grid-template-rows: auto auto 1fr auto;
+        gap: 1rem;
+        h3,p {
+            margin: 0;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+
+    .note {
+        text-align: center;
+        margin-top: 2rem;
+        font-style: italic;
+        color: var(--color-text);
+    }
+}
